@@ -1,4 +1,6 @@
 // נתוני המשחק
+// שימי לב: משושי התשובות (answers/) צריכים להיות 12 קבצי PNG נפרדים שחתכת בפוטושופ
+// כל קובץ צריך להיקרא בדיוק כמו התשובה (עם קו תחתון במקום רווחים)
 const gameData = [
     { question: "כמה פרחים בממוצע צריכה דבורה לבקר כדי לייצר קילוגרם אחד של דבש?", answer: "4,000,000", letterImage: "letters/4000000.png", answerImage: "answers/4000000.png" },
     { question: "כמה עיניים יש לדבורה בסך הכל?", answer: "5", letterImage: "letters/5.png", answerImage: "answers/5.png" },
