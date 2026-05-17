@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פיצוח בכוורת</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- דבורים מעופפות ברקע -->
+    <div class="flying-bees">
+        <div class="bee bee-1">🐝</div>
+        <div class="bee bee-2">🐝</div>
+        <div class="bee bee-3">🐝</div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>🐝 פיצוח בכוורת</h1>
+        </header>
+
+        <!-- לוח השאלות -->
+        <div class="questions-board">
+            <img src="questions.png" alt="לוח השאלות" class="questions-image">
+            <div class="questions-overlay" id="questionsOverlay"></div>
+        </div>
+
+        <!-- לוח התשובות -->
+        <div class="answers-board">
+            <div class="answers-grid" id="answersGrid"></div>
+        </div>
+
+        <!-- שדה קלט סופי -->
+        <div class="final-section" id="finalSection" style="display: none;">
+            <p class="final-instruction">עקבי אחר מסלול מעוף הדבורה וגלי את המסר הסודי</p>
+            <input type="text" id="finalInput" placeholder="הקלידי כאן את המסר">
+            <button id="submitBtn">בדקי תשובה</button>
+        </div>
+
+        <!-- מסך ניצחון -->
+        <div class="victory-overlay" id="victoryOverlay" style="display: none;">
+            <div class="victory-box">
+                <div class="victory-emoji">🎉🐝🍯</div>
+                <h2>כל הכבוד!</h2>
+                <p>פיצחת את הכוורת!</p>
+                <p class="victory-message">"משהו מתוק מגיע"</p>
+                <button id="playAgainBtn">שחקי שוב</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
