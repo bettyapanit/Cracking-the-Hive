@@ -163,7 +163,7 @@ h1 {
 }
 
 .answer-item img {
-    max-width: 180px;
+    width: 150px;
     height: auto;
     display: block;
 }
