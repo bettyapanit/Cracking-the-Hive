@@ -118,6 +118,7 @@ h1 {
 
 .questions-image {
     width: 100%;
+    max-width: 900px;
     height: auto;
     display: block;
 }
@@ -162,7 +163,7 @@ h1 {
 }
 
 .answer-item img {
-    width: 140px;
+    max-width: 180px;
     height: auto;
     display: block;
 }
