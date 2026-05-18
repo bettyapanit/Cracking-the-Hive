@@ -88,42 +88,22 @@ function createAnswersGrid() {
     const grid = document.getElementById('answersGrid');
     grid.innerHTML = '';
     
-    // הוספת תמונת הרקע של לוח התשובות
-    grid.style.backgroundImage = 'url(answers-board.png)';
-    grid.style.backgroundSize = 'contain';
-    grid.style.backgroundRepeat = 'no-repeat';
-    grid.style.backgroundPosition = 'center';
-    grid.style.position = 'relative';
-    grid.style.width = '100%';
-    grid.style.paddingTop = '75%'; // יחס גובה-רוחב של 600/800
-    
-    // ערבוב התשובות
     const shuffled = [...gameData].sort(() => Math.random() - 0.5);
     
-    // מיקומים באחוזים (כמו בלוח השאלות)
-    const positions = [
-        {x: 3.8, y: 3.3}, {x: 21.9, y: 3.3}, {x: 40.0, y: 3.3}, {x: 58.1, y: 3.3},
-        {x: 12.5, y: 30.8}, {x: 30.6, y: 30.8}, {x: 48.8, y: 30.8}, {x: 66.9, y: 30.8},
-        {x: 3.8, y: 58.3}, {x: 21.9, y: 58.3}, {x: 40.0, y: 58.3}, {x: 58.1, y: 58.3}
-    ];
-    
-    for (let i = 0; i < 12; i++) {
+    shuffled.forEach((data, i) => {
         const item = document.createElement('div');
         item.className = 'answer-item';
         item.dataset.answerIndex = i;
-        item.dataset.answer = shuffled[i].answer;
+        item.dataset.answer = data.answer;
         item.draggable = true;
-        item.style.position = 'absolute';
-        item.style.left = `${positions[i].x}%`;
-        item.style.top = `${positions[i].y}%`;
-        item.style.width = '17.5%';
-        item.style.height = '26.7%';
+        
+        item.innerHTML = `<img src="${data.answerImage}" alt="${data.answer}">`;
         
         item.addEventListener('dragstart', handleDragStart);
         item.addEventListener('dragend', handleDragEnd);
         
         grid.appendChild(item);
-    }
+    });
 }
 
 function handleDragStart(e) {

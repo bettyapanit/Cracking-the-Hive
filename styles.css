@@ -137,16 +137,17 @@ h1 {
 }
 
 .answers-grid {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
     margin: 0 auto;
+    max-width: 900px;
 }
 
 .answer-item {
     cursor: grab;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    position: absolute;
 }
 
 .answer-item:hover:not(.used) {
@@ -407,4 +408,46 @@ h1 {
 
 .shake {
     animation: shake 0.4s ease-in-out;
+}
+
+/* רספונסיביות לנייד */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .questions-board {
+        margin-bottom: 20px;
+    }
+    
+    .questions-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .answers-grid {
+        gap: 10px;
+    }
+    
+    .answer-item img {
+        width: 110px;
+    }
+    
+    .final-section {
+        padding: 20px;
+    }
+    
+    #finalInput {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+    
+    #submitBtn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
 }
