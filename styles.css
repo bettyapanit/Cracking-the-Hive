@@ -24,12 +24,12 @@ body::before {
     right: 0;
     bottom: 0;
     background-image:
-        linear-gradient(30deg, transparent 40%, rgba(255, 220, 150, 0.12) 40%, rgba(255, 220, 150, 0.12) 60%, transparent 60%),
-        linear-gradient(150deg, transparent 40%, rgba(255, 220, 150, 0.12) 40%, rgba(255, 220, 150, 0.12) 60%, transparent 60%),
-        linear-gradient(270deg, transparent 40%, rgba(255, 220, 150, 0.12) 40%, rgba(255, 220, 150, 0.12) 60%, transparent 60%);
+        linear-gradient(30deg, transparent 35%, rgba(255, 200, 120, 0.3) 35%, rgba(255, 200, 120, 0.3) 65%, transparent 65%),
+        linear-gradient(150deg, transparent 35%, rgba(255, 200, 120, 0.3) 35%, rgba(255, 200, 120, 0.3) 65%, transparent 65%),
+        linear-gradient(270deg, transparent 35%, rgba(255, 200, 120, 0.3) 35%, rgba(255, 200, 120, 0.3) 65%, transparent 65%);
     background-size: 140px 160px;
     background-position: 0 0, 0 0, 70px 80px;
-    opacity: 0.5;
+    opacity: 0.6;
     pointer-events: none;
     z-index: 0;
 }
@@ -166,7 +166,7 @@ h1 {
 }
 
 .answer-item img {
-    width: 140px;
+    width: 180px;
     height: auto;
     display: block;
 }
@@ -434,7 +434,7 @@ h1 {
     }
     
     .answer-item img {
-        width: 110px;
+        width: 80px;
     }
     
     .final-section {
