@@ -41,15 +41,21 @@ function createQuestionsOverlay() {
     const overlay = document.getElementById('questionsOverlay');
     overlay.innerHTML = '';
     
+    const positions = [
+        {x: 3.8, y: 3.3}, {x: 21.9, y: 3.3}, {x: 40.0, y: 3.3}, {x: 58.1, y: 3.3},
+        {x: 12.5, y: 30.8}, {x: 30.6, y: 30.8}, {x: 48.8, y: 30.8}, {x: 66.9, y: 30.8},
+        {x: 3.8, y: 58.3}, {x: 21.9, y: 58.3}, {x: 40.0, y: 58.3}, {x: 58.1, y: 58.3}
+    ];
+    
     for (let i = 0; i < 12; i++) {
         const hex = document.createElement('div');
         hex.className = 'hexagon';
         hex.dataset.index = i;
         hex.style.position = 'absolute';
-        hex.style.left = `${hexPositions[i].x}px`;
-        hex.style.top = `${hexPositions[i].y}px`;
-        hex.style.width = '140px';
-        hex.style.height = '160px';
+        hex.style.left = `${positions[i].x}%`;
+        hex.style.top = `${positions[i].y}%`;
+        hex.style.width = '17.5%';
+        hex.style.height = '26.7%';
         
         hex.innerHTML = `
             <div class="hex-inner">
