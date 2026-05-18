@@ -16,9 +16,9 @@ const gameData = [
 
 const correctSentence = "משהו מתוק מגיע";
 const hexPositions = [
-    {x: 80, y: 50}, {x: 235, y: 50}, {x: 380, y: 50}, {x: 540, y: 50},
-    {x: 155, y: 160}, {x: 305, y: 160}, {x: 455, y: 160}, {x: 605, y: 160},
-    {x: 80, y: 270}, {x: 235, y: 270}, {x: 380, y: 270}, {x: 540, y: 270}
+    {x: 30, y: 20}, {x: 175, y: 20}, {x: 320, y: 20}, {x: 465, y: 20},
+    {x: 100, y: 185}, {x: 245, y: 185}, {x: 390, y: 185}, {x: 535, y: 185},
+    {x: 30, y: 350}, {x: 175, y: 350}, {x: 320, y: 350}, {x: 465, y: 350}
 ];
 
 let matched = Array(12).fill(false);
@@ -40,27 +40,16 @@ function initGame() {
 function createQuestionsOverlay() {
     const overlay = document.getElementById('questionsOverlay');
     overlay.innerHTML = '';
-    overlay.style.cssText = `
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        padding: 20px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    `;
     
     for (let i = 0; i < 12; i++) {
         const hex = document.createElement('div');
         hex.className = 'hexagon';
         hex.dataset.index = i;
-        
-        const row = Math.floor(i / 4);
-        if (row === 1) {
-            hex.style.marginRight = '-35px';
-        }
+        hex.style.position = 'absolute';
+        hex.style.left = `${hexPositions[i].x}px`;
+        hex.style.top = `${hexPositions[i].y}px`;
+        hex.style.width = '140px';
+        hex.style.height = '160px';
         
         hex.innerHTML = `
             <div class="hex-inner">

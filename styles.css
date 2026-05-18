@@ -163,15 +163,15 @@ h1 {
 }
 
 .answer-item img {
-    width: 250px;
+    width: 140px;
     height: auto;
     display: block;
 }
 
 .hexagon {
-    width: 100%;
-    height: auto;
-    position: relative;
+    position: absolute;
+    width: 140px;
+    height: 160px;
     cursor: pointer;
 }
 
