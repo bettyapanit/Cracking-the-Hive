@@ -40,13 +40,27 @@ function initGame() {
 function createQuestionsOverlay() {
     const overlay = document.getElementById('questionsOverlay');
     overlay.innerHTML = '';
+    overlay.style.cssText = `
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    `;
     
     for (let i = 0; i < 12; i++) {
         const hex = document.createElement('div');
         hex.className = 'hexagon';
         hex.dataset.index = i;
-        hex.style.left = `${hexPositions[i].x}px`;
-        hex.style.top = `${hexPositions[i].y}px`;
+        
+        const row = Math.floor(i / 4);
+        if (row === 1) {
+            hex.style.marginRight = '-35px';
+        }
         
         hex.innerHTML = `
             <div class="hex-inner">
